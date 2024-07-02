@@ -1,0 +1,50 @@
+.headercommon {
+  background-color: white;
+  color: black;
+  padding: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.headercommon h1 {
+  font-size: 1.5em;
+  padding-left: 2%;
+}
+
+.headercommon-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headercommon nav{
+    margin: 0%;
+}
+.headercommon nav ul li div{
+    color: black;
+}
+.headercommon-nav-menu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.headercommon-nav-menu li {
+  margin-right: 20px;
+}
+
+.headercommon-nav-menu li div {
+  cursor: pointer;
+  color: black; 
+}
+
+.headercommon-flex {
+  display: flex;
+  gap: 20px;
+  padding-right: 2%;
+}
+
+.headercommon-flex > div {
+  color: black;
+}
+
+.highlighted {
+  font-weight: bold;
+}

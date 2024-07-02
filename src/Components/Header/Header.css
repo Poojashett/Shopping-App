@@ -1,9 +1,12 @@
 .header {
-  position: relative;
-  text-align: center;
-  color: white;
-  z-index: 1;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    height: 500px;
 }
+
+
 
 .header-top {
   display: flex;
@@ -12,15 +15,19 @@
 }
 
 .header-top h1 {
-  width: 61%;
   text-align: end;
+  padding-left: 3%;
+}
+nav {
+  margin-top: 5%;
 }
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  padding-right: 3%;
+  /* width: 33%; */
   gap: 20px;
 }
 
@@ -44,7 +51,7 @@
   cursor: pointer;
   position: relative;
 }
-.children{
+.children {
   display: flex;
   flex-wrap: wrap;
 }
@@ -52,16 +59,20 @@
 .header nav ul li div {
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
 .header nav ul li:hover div {
-  color: #c79a6e; 
+  color: #c79a6e;
+}
+.header nav ul li div.highlighted {
+  color: #c79a6e;
+  transition: color 0.3s;
 }
 
 .header nav ul li:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -73,7 +84,7 @@
 }
 
 .header nav ul li::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -84,14 +95,13 @@
   transition: width 0.3s;
 }
 
-
 .header h1 {
   margin-top: 20px;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .header p {
-  margin-top: 120px;
+  margin-top: 8%;
   font-size: 1.5em;
 }
 
@@ -102,4 +112,5 @@
   border: none;
   color: white;
   cursor: pointer;
+  margin-top: 1%;
 }

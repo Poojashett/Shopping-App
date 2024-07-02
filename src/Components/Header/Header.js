@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [highlightNav, sethighlightNav] = useState();
+
+  const highlight = (category) => {
+    sethighlightNav(category);
+  };
+
   return (
     <header className="header">
       <div className="header-top">
@@ -16,27 +25,72 @@ const Header = () => {
           <div>
             <i className="fas fa-shopping-bag"></i> Bag
           </div>
+          <div>
+            <FontAwesomeIcon icon={faSignInAlt} /> Login
+          </div>
         </div>
       </div>
       <nav>
         <ul>
           <li>
-            <div>Menswear</div>
+            <Link to="/product-list" style={{textDecoration:"none"}}>
+              <div
+                className={highlightNav === "men" ? "highlighted" : ""}
+                onClick={() => highlight("men")}
+              >
+                Menswear
+              </div>
+            </Link>
           </li>
           <li>
-            <div>Womenswear</div>
+            <Link to="/product-list" style={{textDecoration:"none"}}>
+              <div
+                className={highlightNav === "women" ? "highlighted" : ""}
+                onClick={() => highlight("women")}
+              >
+                Womenswear
+              </div>
+            </Link>
           </li>
           <li>
-            <div>Kids</div>
+            <Link to="/product-list" style={{textDecoration:"none"}}>
+              <div
+                className={highlightNav === "electronic" ? "highlighted" : ""}
+                onClick={() => highlight("electronic")}
+              >
+                Electronics
+              </div>
+            </Link>
           </li>
           <li>
-            <div>Accessories</div>
+            <Link to="/product-list" style={{textDecoration:"none"}}>
+              <div
+                className={highlightNav === "jewelery" ? "highlighted" : ""}
+                onClick={() => highlight("jewelery")}
+              >
+                Jewelery
+              </div>
+            </Link>
           </li>
           <li>
-            <div>About Us</div>
+            <Link to="/product-list" style={{textDecoration:"none"}}>
+              <div
+                className={highlightNav === "about" ? "highlighted" : ""}
+                onClick={() => highlight("about")}
+              >
+                About Us
+              </div>
+            </Link>
           </li>
           <li>
-            <div>Contact Us</div>
+            <Link to="/product-list" style={{textDecoration:"none"}}>
+              <div
+                className={highlightNav === "contact" ? "highlighted" : ""}
+                onClick={() => highlight("contact")}
+              >
+                Contact Us
+              </div>
+            </Link>
           </li>
         </ul>
       </nav>
