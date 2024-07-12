@@ -1,0 +1,63 @@
+.product-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Dropdown.css */
+.dropdown-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-container {
+  position: relative;
+  width: 200px;
+  margin: 20px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  background-color: white;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown:focus {
+  border-color: #45a049;
+  box-shadow: 0 0 5px rgba(69, 160, 73, 0.5);
+  outline: none;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-container.open .dropdown-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.option {
+  animation: fadeIn 0.3s;
+}

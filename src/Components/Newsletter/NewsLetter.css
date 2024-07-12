@@ -1,0 +1,141 @@
+/* Newsletter.css */
+
+.newsletter-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0600cc;
+
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.heading {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-input {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  /* width: 300px; */
+}
+.email-input.invalid {
+  border: 2px solid red;
+}
+.email-input.valid {
+  border: 2px solid green;
+}
+.email-input:focus {
+  border-color: transparent;
+}
+
+.subscribe-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #032601; /* button color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.subscribe-button:disabled {
+  background: grey;
+  cursor: not-allowed;
+  width: 18%;
+}
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* .content {
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+} */
+
+/* .heading {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  margin-bottom: 20px;
+} */
+
+/* .input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+} */
+
+/* .subscribe-button {
+  padding: 10px 20px;
+  background: #ff8c00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+} */

@@ -7,8 +7,20 @@ import {
 import ProductList from "./Components/Products/ProductList";
 import Home from "./Components/Home/Home";
 import HeaderCommon from "./Common/HeaderCommon";
+import Footer from "./Common/Footer";
+import ProductDisplay from "./Components/ProductDisplay/ProductDisplay";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
+  const scrollToFooter = () => {
+    const footerSection = document.getElementById("footer-section");
+    if (footerSection) {
+      footerSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log("Footer not found"); 
+    }
+  };
+
   const AppLayout = () => {
     const location = useLocation();
     const isHomeRoute = location.pathname === "/";
@@ -16,6 +28,7 @@ function App() {
       <div>
         {!isHomeRoute && <HeaderCommon />}
         <Outlet />
+        <Footer id="footer-section" />
       </div>
     );
   };
@@ -27,11 +40,19 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <Home scrollToFooter={scrollToFooter} />,
         },
         {
-          path: "product-list",
+          path: "product-list/:category",
           element: <ProductList />,
+        },
+        {
+          path: "product-display/:id",
+          element: <ProductDisplay />,
+        },
+        {
+          path: "cart",
+          element: <Cart/>,
         },
       ],
     },

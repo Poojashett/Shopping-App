@@ -1,12 +1,41 @@
 .header {
-    position: relative;
-    text-align: center;
-    color: white;
-    z-index: 2;
-    height: 500px;
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 600px;
+  overflow: hidden;
 }
 
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.7); */
+  background-color: #0c0600cc;
+  z-index: 0;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
 
 .header-top {
   display: flex;
@@ -18,6 +47,7 @@
   text-align: end;
   padding-left: 3%;
 }
+
 nav {
   margin-top: 5%;
 }
@@ -27,8 +57,8 @@ nav {
   justify-content: center;
   align-items: center;
   padding-right: 3%;
-  /* width: 33%; */
   gap: 20px;
+  cursor: pointer;
 }
 
 .flex div {
@@ -43,17 +73,11 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-  position: relative;
 }
 
 .header nav ul li {
   margin: 0 15px;
   cursor: pointer;
-  position: relative;
-}
-.children {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .header nav ul li div {
@@ -66,34 +90,35 @@ nav {
 .header nav ul li:hover div {
   color: #c79a6e;
 }
+
 .header nav ul li div.highlighted {
   color: #c79a6e;
   transition: color 0.3s;
 }
 
-.header nav ul li:hover::after {
+/* .header nav ul li:hover::after {
   content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -5px; /* Adjust the position of the underline */
-  width: 50%; /* Adjust the width of the underline */
-  height: 2px; /* Adjust the height of the underline */
-  background-color: #c79a6e; /* Adjust the underline color */
+  bottom: -5px;
+  width: 50%;
+  height: 2px;
+  background-color: #c79a6e;
   transition: width 0.3s;
-}
+} */
 
-.header nav ul li::after {
+/* .header nav ul li::after {
   content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -5px; /* Adjust the position of the underline */
+  bottom: -5px;
   width: 0;
-  height: 2px; /* Adjust the height of the underline */
-  background-color: #c79a6e; /* Adjust the underline color */
+  height: 2px;
+  background-color: #c79a6e;
   transition: width 0.3s;
-}
+} */
 
 .header h1 {
   margin-top: 20px;

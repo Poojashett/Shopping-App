@@ -2,7 +2,7 @@
   position: relative;
   z-index: 3;
   background: white;
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
 }
 .content-below-video h2 {
   display: flex;
@@ -22,11 +22,19 @@ p {
   align-items: center;
   gap: 50px;
   padding: 0 8vw;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     rgba(249, 249, 249, 0.7),
     rgba(205, 202, 202, 0.7)
+  ); */
+  background: linear-gradient(
+    45deg,
+    #fffffe,
+    rgba(11, 5, 0, 0.966)
   );
+  /* background-color: #140a00; */
+  /* background-color: #efe2d5f0; */
+
   color: #c79a6e;
 }
 

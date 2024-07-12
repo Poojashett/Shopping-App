@@ -1,0 +1,17 @@
+.new-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background: linear-gradient(
+    45deg,
+    rgb(0, 0, 0),
+    rgb(1, 1, 0)
+  ); */
+  /* background-color: #0c0600f0; */
+  /* background-color: #f3efebf0; */
+  background: linear-gradient(45deg, #fffffe, rgba(11, 5, 0, 0.966));
+}
+h2 {
+  text-align: center;
+}
